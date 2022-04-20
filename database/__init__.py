@@ -12,5 +12,7 @@ db = SQLAlchemy(app)
 
 ma = Marshmallow(app)
 
+import database.models
+
 db.create_all()
 db.session.commit()
