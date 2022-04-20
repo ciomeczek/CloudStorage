@@ -12,6 +12,7 @@ api = Api(app)
 
 app.config['UPLOAD_FOLDER'] = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../uploads/')
 app.config['BUNDLE_ERRORS'] = True
+app.config['PROPAGATE_EXCEPTIONS'] = True
 
 app.config["JWT_SECRET_KEY"] = os.getenv("SECRET_KEY")
 app.config["JWT_ACCESS_TOKEN_EXPIRES"] = timedelta(hours=1)
